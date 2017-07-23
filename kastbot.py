@@ -19,6 +19,8 @@ samo_url = "http://signature.rocketleaguestats.com/normal/steam/7656119799481851
 ragna_url = "http://signature.rocketleaguestats.com/normal/steam/76561197999848401.png"
 ryuken_url = "http://signature.rocketleaguestats.com/normal/steam/76561197960366993.png"
 john5_url= "http://signature.rocketleaguestats.com/normal/steam/76561197961062191.png"
+patch_note="http://rocketleague.wikia.com/wiki/Patch_Notes"
+zazou_url="http://signature.rocketleaguestats.com/normal/steam/76561197969128332.png"
 
 def handle_command(command, channel):
     response = "Not sure what you mean. Use the *" + EXAMPLE_COMMAND + \
@@ -42,13 +44,15 @@ def handle_command(command, channel):
     elif command == "john5 rank":
         slack_client.api_call("chat.postMessage", channel=channel, text=john5_url, as_user=True)
 
+    elif command == "zazoufumi rank":
+        slack_client.api_call("chat.postMessage", channel=channel, text=zazou_url, as_user=True)
+
     elif command == "patch note":
-        slack_client.api_call("chat.postMessage", channel=channel, text=john5_url, as_user=True)
-        http://rocketleague.wikia.com/wiki/Patch_Notes
+        slack_client.api_call("chat.postMessage", channel=channel, text=patch_url, as_user=True)
 
     else:
         slack_client.api_call("chat.postMessage", channel=channel,
-            text="commands available : player rank.", as_user=True)
+            text="commands available : player rank / patch note / ..", as_user=True)
 
 
 
