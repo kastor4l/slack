@@ -1,0 +1,5 @@
+StarterBot connected and running!
+Traceback (most recent call last):
+  File "kastbot.py", line 83, in <module>
+    time.sleep(READ_WEBSOCKET_DELAY)
+KeyboardInterrupt

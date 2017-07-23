@@ -1,6 +1,8 @@
 import os
 import time
+import rocket_snake as rs
 from slackclient import SlackClient
+from pprint import pprint
 
 # starterbot's ID as an environment variable
 BOT_ID = os.environ.get("BOT_ID")
@@ -55,6 +57,26 @@ def handle_command(command, channel):
             text="commands available : player rank / patch note / ..", as_user=True)
 
 
+#########################################################################
+
+# API ROCKET SNAKE
+
+#async def example_function():
+
+#client = rs.RLS_Client("JOSE0546UONB1U1OMOJFVZYMIJLSDGDM")
+
+#    print("\nSeasons:")
+#    pprint(await client.get_seasons())
+#    print("\nPlatforms:")
+#    pprint(await client.get_platforms())
+
+
+#print("The event loop has now exited after executing the example.")
+
+
+#get_player(unique_id: "76561197984517179", platform: steam)
+
+##########################################################################
 
 def parse_slack_output(slack_rtm_output):
     """
